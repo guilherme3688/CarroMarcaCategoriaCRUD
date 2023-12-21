@@ -80,8 +80,9 @@
                 success: function (retorno) {
                     if (retorno.mensagem) {
                         model.Success(retorno.mensagem);
+                        categoria.Id(retorno.id);
 
-                        model.Id(retorno.id);
+                        model.Editar(categoria);
                         model.ObterCategorias();
                     } else if(retorno.erro) {
                         model.Error(retorno.erro);

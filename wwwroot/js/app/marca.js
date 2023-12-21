@@ -80,8 +80,9 @@
                 success: function (retorno) {
                     if (retorno.mensagem) {
                         model.Success(retorno.mensagem);
+                        marca.Id(retorno.id);
 
-                        model.Id(retorno.id);
+                        model.Editar(marca);
                         model.ObterMarcas();
                     } else if (retorno.erro) {
                         model.Error(retorno.erro);

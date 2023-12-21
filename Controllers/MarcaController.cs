@@ -29,7 +29,7 @@ namespace ProjetoCarro.Controllers {
 
             _db.SaveChanges();
 
-            return Json(new { Id = retorno.Id, Mensagem = "Marca cadastrada com sucesso!" });
+            return Json(new { Id = retorno.Id, Mensagem = "Marca salva com sucesso!" });
         }
 
         public virtual ActionResult Editar(int id){

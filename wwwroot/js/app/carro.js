@@ -116,8 +116,9 @@
                 success: function (retorno) {
                     if (retorno.mensagem) {
                         model.Success(retorno.mensagem);
+                        carro.Id(retorno.id);
 
-                        model.Id(retorno.id);
+                        model.Editar(carro);
                         model.ObterCarros();
                     } else if (retorno.erro) {
                         model.Error(retorno.erro);
