@@ -1,0 +1,14 @@
+﻿@model ProjetoCarro.Models.CategoriaViewModel
+@{
+    ViewBag.Title = "Categoria";
+}
+
+@Html.Partial("Formulario")
+
+<div data-bind="visible: TemRegistros">
+    @Html.Partial("Grid")
+</div>
+
+@section scripts {
+    <script src="~/js/app/categoria.js"></script>
+}

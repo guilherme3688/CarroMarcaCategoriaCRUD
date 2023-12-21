@@ -1,0 +1,24 @@
+﻿<table class="table table-striped">
+    <thead class="thead-light">
+        <tr>
+            <th>Ações</th>
+            <th>Id</th>
+            <th>Modelo</th>
+            <th>Ano de lançamento</th>
+            <th>Data de cadastro</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Carros">
+        <tr>
+            <td>
+                <button class="btn btn-info" data-bind="click: $root.Editar">
+                    <span class="fa fa-pen-to-square"></span> Editar
+                </button>
+            </td>
+            <td data-bind="text: Id"></td>
+            <td data-bind="text: Modelo"></td>
+            <td data-bind="text: AnoLancamento"></td>
+            <td data-bind="text: DataCadastro"></td>
+        </tr>
+    </tbody>
+</table>

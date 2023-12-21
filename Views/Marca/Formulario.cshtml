@@ -1,0 +1,42 @@
+﻿<div id="formulario-marca">
+    <h2>Cadastro de Marca</h2>
+    <br />
+    <div class="menu">
+        <div></div>
+        <button type="submit" class="btn btn-dark" data-bind="click: Novo">
+            <span class="fa fa-pencil"></span> Novo
+        </button>
+        <button type="submit" class="btn btn-primary" data-bind="click: Salvar, enable: PodeSalvar">
+            <span class="fa fa-floppy-disk"></span> Salvar
+        </button>
+        <button type="submit" class="btn btn-danger" data-bind="click: Excluir, visible: TemId">
+            <span class="fa fa-trash"></span> Excluir
+        </button>
+    </div>
+    <br />
+    <div class="alert alert-success" role="alert" data-bind="visible: TemMensagem">
+        <span data-bind="text: Success"></span>
+    </div>
+    <div class="alert alert-danger" role="alert" data-bind="visible: TemErro">
+        <span data-bind="text: Error"></span>
+    </div>
+    <form>
+        <div class="row">
+            <div class="col-lg-4">
+                <label for="id">Código:</label>
+                <input type="text" class="form-control" data-bind="value: Id, enable: false" name="Id">
+            </div>
+            <div class="col-lg-4">
+                <label for="dataCadastro">Data de cadastro:</label>
+                <input type="text" class="form-control" data-bind="value: DataCadastro, enable: false" name="DataCadastro">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-8">
+                <label for="nome">Nome da marca:</label>
+                <input type="text" class="form-control" placeholder="Informe o nome da marca" data-bind="value: NomeMarca" name="NomeMarca" maxlength="50">
+            </div>
+        </div>
+    </form>
+</div>

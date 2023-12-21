@@ -1,0 +1,14 @@
+﻿@model ProjetoCarro.Models.MarcaViewModel
+@{
+    ViewBag.Title = "Marca";
+}
+
+@Html.Partial("Formulario")
+
+<div data-bind="visible: TemRegistros">
+    @Html.Partial("Grid")
+</div>
+
+@section scripts {
+    <script src="~/js/app/marca.js"></script>
+}
