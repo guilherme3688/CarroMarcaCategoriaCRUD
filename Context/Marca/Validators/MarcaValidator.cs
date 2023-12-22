@@ -14,7 +14,7 @@
 
         private bool ValidarRelacionamentos(int idMarca) {
             var temCarrosVinculadosMarca = _db.Carros
-                .Where(c => c.Id == idMarca && c.DataExclusao == null)
+                .Where(c => c.IdMarca == idMarca && c.DataExclusao == null)
                 .Any();
 
             if (temCarrosVinculadosMarca) {
