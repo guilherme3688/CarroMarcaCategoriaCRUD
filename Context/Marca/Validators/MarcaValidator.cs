@@ -17,12 +17,9 @@
                 .Where(c => c.IdMarca == idMarca && c.DataExclusao == null)
                 .Any();
 
-            if (temCarrosVinculadosMarca) {
-                return false;
-            }
-            else {
-                return true;
-            }
+            if (temCarrosVinculadosMarca) { return false; }
+            
+            return true;
         }
     }
 }
