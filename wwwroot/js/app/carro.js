@@ -122,7 +122,7 @@
                         model.ObterCarros();
                     } else if (retorno.erro) {
                         model.Error(retorno.erro);
-                        model.Limpar();
+                        model.Novo();
                     }
 
                     model._limparMensagens();
