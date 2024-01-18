@@ -6,23 +6,16 @@
         </button>
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
             <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
-
                 <div class="dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="dropdownCadastro" data-bs-toggle="dropdown" aria-expanded="false">Cadastros</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownCadastro">
-                        <li class="dropdown-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Carro" asp-action="Index">Carro</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categoria" asp-action="Index">Categoria</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Marca" asp-action="Index">Marca</a>
-                        </li>
-                    </ul>
+                    <div class="dropdown-menu" aria-labelledby="dropdownCadastro">
+                        <a class="dropdown-item text-dark" asp-controller="Carro" asp-action="Index">Carro</a>
+                        <a class="dropdown-item text-dark" asp-controller="Categoria" asp-action="Index">Categoria</a>
+                        <a class="dropdown-item text-dark" asp-controller="Marca" asp-action="Index">Marca</a>
+                    </div>
                 </div>
             </ul>
         </div>
